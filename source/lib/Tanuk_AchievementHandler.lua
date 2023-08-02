@@ -8,8 +8,13 @@ import "Tanuk_Achievement"
 local pd <const> = playdate
 local gfx <const> = pd.graphics
 
+--- Achievement Handler
 class("Tanuk_AchievementHandler").extends()
 
+--- Initialize the achievement handler
+-- @param arrAchievements array of Achievement
+-- @param fnNotification to use when using a customer notification, OPTIONAL
+-- @param frameCheck represents the number of frames between 2 checks, OPTIONAL, default 30
 function Tanuk_AchievementHandler:init(arrAchievements, fnNotification, frameCheck)
     Tanuk_AchievementHandler.super.init(self)
 

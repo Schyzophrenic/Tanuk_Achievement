@@ -31,7 +31,7 @@ function Tanuk_AchievementHandler:checkAchievements()
         for i=1, #self.arrAchievements do
             local achievement = self.arrAchievements[i]
             if not achievement.isCompleted and achievement:fnTest() then
-                local sprNotification = self.fnNotification(achievement)
+                local sprNotification = self:fnNotification(achievement)
                 assert(sprNotification, "The custom notification implement did not return a sprite")
                 achievement.isCompleted = true
                 table.insert(self.arrSprNotifications, sprNotification)
@@ -50,9 +50,11 @@ function Tanuk_AchievementHandler:shouldRunCheck()
     return false
 end
 
-function Tanuk_AchievementHandler.defaultNotification(achievement)
+function Tanuk_AchievementHandler:defaultNotification(achievement)
     local sprNotification = gfx.sprite.spriteWithText("ACHIEVEMENT\n" .. achievement.name .. "\n" .. achievement.description, 350, 100)
-    sprNotification:moveTo(200, 200)
+    print (200, 10 + #self.arrSprNotifications * 100)
+    sprNotification:setCenter(0, 0)
+    sprNotification:moveTo(5, 10 + #self.arrSprNotifications * 70)
     sprNotification:add()
 
     return sprNotification

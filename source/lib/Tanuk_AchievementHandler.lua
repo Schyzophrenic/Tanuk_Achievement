@@ -1,3 +1,10 @@
+-----------------------------------------------
+--- Achievement Library             v1.0.0 ---
+---                                         ---
+---            (c) Tanuk Prod               ---
+---     https://github.com/Schyzophrenic    ---
+-----------------------------------------------
+
 import "CoreLibs/graphics"
 import "CoreLibs/object"
 import "CoreLibs/sprites"

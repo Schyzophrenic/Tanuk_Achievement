@@ -16,7 +16,6 @@ import "Tanuk_Achievement"
 local pd <const> = playdate
 local gfx <const> = pd.graphics
 
-local ANIMATION_DURATION <const> = 500
 local REMOVAL_DELAY <const> = 5000
 
 --- Achievement Handler

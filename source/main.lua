@@ -19,16 +19,16 @@ table.insert(arrAchievements, Tanuk_Achievement("Good start!", "Welcome to the g
 -- End achievements
 
 -- Global Achievement handler
-__achievementHandler = Tanuk_AchievementHandler(arrAchievements, function (self, achievement)
-	print("Custom function")
-	local sprNotification = gfx.sprite.spriteWithText("ACHIEVEMENT\n" .. achievement.name .. "\n" .. achievement.description, 350, 100)
-	sprNotification:setCenter(0, 0)
-	sprNotification:moveTo(5, 5)
-	sprNotification:add()
+-- __achievementHandler = Tanuk_AchievementHandler(arrAchievements, function (self, achievement)
+-- 	print("Custom function")
+-- 	local sprNotification = gfx.sprite.spriteWithText("ACHIEVEMENT\n" .. achievement.name .. "\n" .. achievement.description, 350, 100)
+-- 	sprNotification:setCenter(0, 0)
+-- 	sprNotification:moveTo(5, 5)
+-- 	sprNotification:add()
 
-	return sprNotification
-end)
--- __achievementHandler = Tanuk_AchievementHandler(arrAchievements)
+-- 	return sprNotification
+-- end)
+__achievementHandler = Tanuk_AchievementHandler(arrAchievements)
 
 
 -- Just to have something moving on the screen

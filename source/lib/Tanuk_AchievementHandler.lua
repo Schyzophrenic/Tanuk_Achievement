@@ -5,7 +5,6 @@
 ---     https://github.com/Schyzophrenic    ---
 -----------------------------------------------
 
-import "CoreLibs/animator"
 import "CoreLibs/graphics"
 import "CoreLibs/object"
 import "CoreLibs/sprites"
